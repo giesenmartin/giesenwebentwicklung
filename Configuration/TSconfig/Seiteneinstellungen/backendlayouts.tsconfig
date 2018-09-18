@@ -1,0 +1,60 @@
+mod.web_layout.BackendLayouts {
+	Onepager {
+		title = Onepage
+		icon = fileadmin/nettemplate/Resources/Public/Bilder/lspalten1.png
+		config {
+			backend_layout {
+				colCount = 0
+				rowCount = 0
+			}
+		}
+	}
+
+	Onepagersection {
+		title = Onepager Abschnitt
+		icon = fileadmin/nettemplate/Resources/Public/Bilder/lspalten2.png
+		config {
+			backend_layout {
+				colCount = 1
+				rowCount = 1
+				rows {
+					1 {
+						columns {
+							1 {
+								name = Inhalt des Onepager Abschnitt
+								colPos = 1
+								allowed = header,text,textpic,image,textmedia,bullets,table,uploads,menu_abstract,menu_categorized_content,menu_categorized_pages,menu_pages,menu_subpages,menu_recently_updated,menu_related_pages,menu_section,menu_section_pages,menu_sitemap,menu_sitemap_pages,shortcut,list,div,html,login,form_formframework,gridelements_pi1
+							}
+
+						}
+					}
+				}
+			}
+		}
+	}
+
+ Default {
+		title = Standard Seite
+		icon = fileadmin/nettemplate/Resources/Public/Bilder/lspalten3.png
+		config {
+			backend_layout {
+				colCount = 1
+				rowCount = 1
+				rows {
+					1 {
+						columns {
+							1 {
+								name = Inhalt
+								colPos = 1
+								###                allowed = undefined das muss weg
+							}
+
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+

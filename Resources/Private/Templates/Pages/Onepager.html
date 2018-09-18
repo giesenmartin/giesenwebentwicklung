@@ -1,0 +1,23 @@
+
+
+<f:render partial="Pages/Navigation" section="Main"	arguments="{subpages : subpages}" />
+
+
+
+
+<f:for each="{subpages}" as="section" iteration="iteration">
+	<section id="{section.data.subtitle}"  class="onepageSection{f:if(condition:iteration.isEven, then: ' even')}">
+		<div class="container">
+			<f:cObject typoscriptObjectPath="lib.renderContentSubpages" data="{section.data.uid}"   />
+		</div>
+	</section>
+</f:for>
+
+
+
+
+
+
+
+
+

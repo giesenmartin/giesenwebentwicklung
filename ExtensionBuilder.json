@@ -1,0 +1,39 @@
+{
+    "modules": [],
+    "properties": {
+        "backendModules": [],
+        "description": "",
+        "emConf": {
+            "category": "distribution",
+            "custom_category": "",
+            "dependsOn": "typo3 => 8.7.0-9.9.99\n",
+            "disableLocalization": false,
+            "disableVersioning": false,
+            "skipGenerateDocumentationTemplate": false,
+            "sourceLanguage": "en",
+            "state": "alpha",
+            "targetVersion": "8.7.0-8.7.99",
+            "version": "1.0.0"
+        },
+        "extensionKey": "giesenwebentwicklung",
+        "name": "Templates Eigene Webseite",
+        "originalExtensionKey": "",
+        "originalVendorName": "",
+        "persons": [
+            {
+                "company": "Giesen Webentwicklung",
+                "email": "martin@giesen-webentwicklung.de",
+                "name": "Martin Giesen",
+                "role": "Developer"
+            }
+        ],
+        "plugins": [],
+        "vendorName": "Giesen"
+    },
+    "wires": [],
+    "log": {
+        "last_modified": "2018-09-12 05:02",
+        "extension_builder_version": "8.10.2",
+        "be_user": " (1)"
+    }
+}

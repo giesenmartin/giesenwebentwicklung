@@ -1,0 +1,35 @@
+{namespace b=OliverThiele\OtBootstrap3\ViewHelpers}
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:f="http://xsd.oliver-thiele.de/ns/typo3/cms-fluid/7.6/ViewHelpers"
+	  data-namespace-typo3-fluid="true">
+<head>
+	<meta charset="utf-8">
+	<title>Partial: Navigation</title>
+</head>
+<body>
+
+<f:section name="Main">
+	<nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+		<div class="container">
+			<a class="navbar-brand js-scroll-trigger" href="#page-top">Start Bootstrap</a>
+			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+				Menu
+				<i class="fas fa-bars"></i>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav text-uppercase ml-auto">
+
+
+					<f:for each="{subpages}" as="section" iteration="iteration">
+						<li class="nav-item"><a class="nav-link js-scroll-trigger" href="#{section.data.subtitle}" title="{section.title}">{section.title}</a></li>
+					</f:for>
+
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+</f:section>
+
+</body>
+</html>

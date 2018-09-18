@@ -1,0 +1,97 @@
+lib.quatsch = TEXT
+
+
+
+lib.renderContentSubpages = CONTENT
+lib.renderContentSubpages {
+  table = tt_content
+  select {
+    pidInList.current = 1
+  }
+}
+
+/*
+lib.renderContentSubpages = TEXT
+lib.renderContentSubpages.current = 1
+lib.renderContentSubpages.wrap = <h1>|</h1>
+
+*/
+
+
+# Default PAGE object:
+page = PAGE
+page {
+  config.contentObjectExceptionHandler = 0
+
+  includeCSS {
+    file1 = EXT:giesenwebentwicklung/Resources/Public/Css/giesen.css
+
+  }
+
+
+
+  includeJSFooterlibs {
+    jquery = EXT:giesenwebentwicklung/Resources/Public/Js/giesen.min.js
+    jquery.type = application/x-javascript
+
+  }
+
+
+
+
+
+  10 = FLUIDTEMPLATE
+  10 {
+    partialRootPath = EXT:giesenwebentwicklung/Resources/Private/Partials
+    layoutRootPath = EXT:giesenwebentwicklung/Resources/Private/Layouts
+
+    dataProcessing {
+      10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+      10 {
+        special = directory
+        special.value = 1
+        levels = 1
+        as = subpages
+      }
+      20 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+      20 {
+        special = directory
+        special.value = 1
+        levels = 1
+        as = subcontent
+
+
+
+
+
+      }
+
+
+
+    }
+
+
+
+    variables {
+
+    }
+
+    file.stdWrap.cObject = CASE
+    file.stdWrap.cObject {
+
+      key.data = levelfield:-1, backend_layout_next_level, slide
+      key.override.field = backend_layout
+
+      default = TEXT
+      default.value =  EXT:giesenwebentwicklung/Resources/Private/Templates/Pages/Default.html
+      pagets__Default < .default
+      pagets__Onepager < .default
+      pagets__Onepager.value =  EXT:giesenwebentwicklung/Resources/Private/Templates/Pages/Onepager.html
+      pagets__Onepagersection < .default
+      pagets__Onepagersection.value =  EXT:giesenwebentwicklung/Resources/Private/Templates/Pages/Onepagersection.html
+    }
+  }
+}
+
+
+

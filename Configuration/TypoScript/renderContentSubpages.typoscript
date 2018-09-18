@@ -1,0 +1,7 @@
+lib.renderContentSubpages = CONTENT
+lib.renderContentSubpages {
+  table = tt_content
+  select {
+     pidInList = {#pid}
+  }
+}
