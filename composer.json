@@ -1,28 +1,25 @@
 {
     "name": "giesen/giesenwebentwicklung",
+    "description": "Template f\u0000r meine eigene Hompage",
     "type": "typo3-cms-extension",
-    "description": "",
+    "require": {
+		"typo3/cms-core": ">=7.6.0 <9.9.99"
+    },
     "authors": [
         {
-            "name": "Maritn Giesen",
-            "role": "Developer"
+            "name": "giesenmartin",
+            "email": "info@martin-giesen.de"
         }
     ],
-    "require": {
-        "typo3/cms-core": "^8.7.1"
-    },
-    "autoload": {
-        "psr-4": {
-            "Giesen\\Giesenwebentwicklung\\": "Classes"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Giesen\\Giesenwebentwicklung\\Tests\\": "Tests"
-        }
-    },
-    "replace": {
-        "giesenwebentwicklung": "self.version",
-        "typo3-ter/giesenwebentwicklung": "self.version"
-    }
+	"replace": {
+		"giesenwebentwicklung": "self.version",
+		"typo3-ter/giesenwebentwicklung": "self.version"
+	},
+	"autoload": {
+		"psr-4": {
+			"Giesen\\giesenwebentwicklung\\": "Classes/"
+		}
+	}
+
+
 }
