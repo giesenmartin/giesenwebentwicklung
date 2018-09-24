@@ -1,4 +1,3 @@
-lib.quatsch = TEXT
 
 
 
@@ -21,7 +20,48 @@ lib.renderContentSubpages.wrap = <h1>|</h1>
 # Default PAGE object:
 page = PAGE
 page {
-  config.contentObjectExceptionHandler = 0
+
+  bodyTagAdd = data-spy="scroll" data-target="#navbarResponsive" data-offset="93"
+
+  config {
+    absRefPrefix = auto
+ #   no_cache = {$config.no_cache}
+    pageTitleFirst = 1
+    pageTitleSeparator = -
+    pageTitleSeparator.noTrimWrap = | | |
+    linkVars = L(int)
+  #  prefixLocalAnchors = {$config.prefixLocalAnchors}
+ #   typolinkEnableLinksAcrossDomains = {$config.typolinkEnableLinksAcrossDomains}
+    doctype = html5
+  #  removeDefaultJS = {$config.removeDefaultJS}
+    admPanel = 0
+
+    debug =1
+ #   sendCacheHeaders = {$config.sendCacheHeaders}
+  #  index_enable = 1
+  #  index_externals = 1
+  #  index_metatags = 1
+  #  headerComment = {$config.headerComment}
+
+    // Enable RealUrl
+  #  tx_realurl_enable = 1
+
+    // Language Settings
+    sys_language_uid = 0
+    sys_language_overlay = 1
+    sys_language_mode = content_fallback
+    language = de
+    locale_all = de_DE.UTF-8
+    htmlTag_setParams = lang="de" dir="ltr" class="no-js"
+    contentObjectExceptionHandler = 0
+
+    // Compression and Concatenation of CSS and JS Files
+ #   compressJs = {$config.compressJs}
+ #   compressCss = {$config.compressCss}
+ #   concatenateJs = {$config.concatenateJs}
+ #   concatenateCss = {$config.concatenateCss}
+  }
+
 
   includeCSS {
     file1 = EXT:giesenwebentwicklung/Resources/Public/Css/giesen.css
@@ -95,3 +135,78 @@ page {
 
 
 
+
+tt_content {
+  # Slideshow
+  startslider = FLUIDTEMPLATE
+  startslider {
+    partialRootPath = EXT:giesenwebentwicklung/Resources/Private/Partials
+    layoutRootPath = EXT:giesenwebentwicklung/Resources/Private/Layouts
+
+    file = EXT:giesenwebentwicklung/Resources/Private/Templates/ContentElements/StartSlider.html
+    variables {
+      settings < page.10.settings
+    }
+
+    dataProcessing {
+      # Make FlexForm available in {settings} and tt_content.* in {data}
+      10 = Giesen\Giesenwebentwicklung\DataProcessing\FlexFormProcessor
+    }
+  }
+
+  referenceslider = FLUIDTEMPLATE
+  referenceslider {
+
+    partialRootPath = EXT:giesenwebentwicklung/Resources/Private/Partials
+    layoutRootPath = EXT:giesenwebentwicklung/Resources/Private/Layouts
+
+    file = EXT:giesenwebentwicklung/Resources/Private/Templates/ContentElements/ReferenceSlider.html
+    variables {
+      settings < page.10.settings
+    }
+
+    dataProcessing {
+      # Make FlexForm available in {settings} and tt_content.* in {data}
+      10 = Giesen\Giesenwebentwicklung\DataProcessing\FlexFormProcessor
+    }
+  }
+
+
+  textform = FLUIDTEMPLATE
+  textform {
+
+    partialRootPath = EXT:giesenwebentwicklung/Resources/Private/Partials
+    layoutRootPath = EXT:giesenwebentwicklung/Resources/Private/Layouts
+
+    file = EXT:giesenwebentwicklung/Resources/Private/Templates/ContentElements/TextForm.html
+    variables {
+      settings < page.10.settings
+    }
+
+    dataProcessing {
+      # Make FlexForm available in {settings} and tt_content.* in {data}
+      10 = Giesen\Giesenwebentwicklung\DataProcessing\FlexFormProcessor
+    }
+
+
+
+
+  }
+
+
+
+
+
+}
+
+plugin.tx_form.view.templateRootPaths.0 = EXT:giesenwebentwicklung/Resources/Private/Templates/ContentElements/Form
+plugin.tx_form.view.templateRootPaths.5 = EXT:giesenwebentwicklung/Resources/Private/Templates/ContentElements/Form
+
+
+plugin.tx_form.settings.yamlConfigurations {
+  100 = EXT:giesenwebentwicklung/Configuration/Forms/Base.yaml
+}
+
+module.tx_form.settings.yamlConfigurations {
+   100 = EXT:giesenwebentwicklung/Configuration/Forms/Base.yaml
+}

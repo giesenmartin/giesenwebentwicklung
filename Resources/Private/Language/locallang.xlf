@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2014-05-02T12:00:00Z" product-name="in2template">
+		<header/>
+		<body>
+			<trans-unit id="contentElement.slider">
+				<source>Slideshow</source>
+			</trans-unit>
+			<trans-unit id="contentElement.slider.description">
+				<source>Fullscreen slideshow content element</source>
+			</trans-unit>
+
+			<trans-unit id="flexform.slider.main">
+				<source>Main</source>
+			</trans-unit>
+			<trans-unit id="flexform.slider.main.slider">
+				<source>Slider settings</source>
+			</trans-unit>
+			<trans-unit id="flexform.slider.main.slider.slide">
+				<source>Slide</source>
+			</trans-unit>
+			<trans-unit id="flexform.slider.main.slider.image">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="flexform.slider.main.slider.imageOrientationVertical">
+				<source>Image orientation vertical</source>
+			</trans-unit>
+			<trans-unit id="flexform.slider.main.slider.imageOrientationVertical.0">
+				<source>top</source>
+			</trans-unit>
+			<trans-unit id="flexform.slider.main.slider.imageOrientationVertical.1">
+				<source>middle</source>
+			</trans-unit>
+			<trans-unit id="flexform.slider.main.slider.imageOrientationVertical.2">
+				<source>bottom</source>
+			</trans-unit>
+			<trans-unit id="flexform.slider.main.slider.imageOrientationHorizontal">
+				<source>Image orientation horizontal</source>
+			</trans-unit>
+			<trans-unit id="flexform.slider.main.slider.imageOrientationHorizontal.0">
+				<source>left</source>
+			</trans-unit>
+			<trans-unit id="flexform.slider.main.slider.imageOrientationHorizontal.1">
+				<source>middle</source>
+			</trans-unit>
+			<trans-unit id="flexform.slider.main.slider.imageOrientationHorizontal.2">
+				<source>right</source>
+			</trans-unit>
+			<trans-unit id="flexform.slider.main.slider.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="flexform.slider.main.slider.subtitle">
+				<source>Subtitle</source>
+			</trans-unit>
+			<trans-unit id="flexform.slider.main.slider.link">
+				<source>Link</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

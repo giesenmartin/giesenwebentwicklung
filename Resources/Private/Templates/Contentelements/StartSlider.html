@@ -1,0 +1,18 @@
+<f:if condition="{settings.slider}">
+	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+		<div class="carousel-inner">
+			<f:for each="{settings.slider}" as="item" iteration="iteration">
+				<div class="{f:if(condition: iteration.isFirst,then:' active')} carousel-item" data-itemno="{iteration.index}">
+					<f:render partial="Contentelements/Carousel/ItemImage" arguments="{item: item.sliderConfiguration}"/>
+				</div>
+			</f:for>
+		</div>
+
+		<f:render partial="Contentelements/Carousel/Indicators" arguments="{items: settings.slider}" />
+		<f:render partial="Contentelements/Carousel/Control" arguments="{items: settings.slider}"/>
+
+	</div>
+</f:if>
+
+
+

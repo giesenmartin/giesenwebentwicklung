@@ -1,2 +1,43 @@
 RTE.default.preset = minimal
 RTE.config.tt_content.bodytext.preset = Giesen
+
+
+
+mod {
+	wizards.newContentElement.wizardItems.extra {
+		header = Slider
+		elements {
+			startslider {
+				iconIdentifier = startslider
+				title = Start Slider
+				description = Slided schöne Bilder
+				tt_content_defValues {
+					CType = startslider
+				}
+			}
+			referenceslider {
+				iconIdentifier = referenceslider
+				title = Reference Slider
+				description = Slided Referencen
+				tt_content_defValues {
+					CType = referenceslider
+				}
+			}
+
+			referenceslider {
+      				iconIdentifier = referenceslider
+      				title = Reference Slider
+      				description = Slided Referencen
+      				tt_content_defValues {
+      					CType = referenceslider
+      				}
+      }
+
+
+		}
+		show = *
+	}
+}
+
+
+

@@ -1,20 +1,40 @@
 
+<f:layout name="Pages/Page" />
+
+
+<f:section name="Main">
+
+
 
 <f:render partial="Pages/Navigation" section="Main"	arguments="{subpages : subpages}" />
 
 
+	<f:for each="{subpages}" as="section" iteration="iteration">
+		<section id="{section.data.subtitle}"  class="onepageSection{f:if(condition:iteration.isFirst, then: ' firstSection')}">
+			<div class="container">
+				<div class="box">
+					<div class="row">
+						<div class="col-12">
+							<f:cObject typoscriptObjectPath="lib.renderContentSubpages" data="{section.data.uid}"   />
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</f:for>
 
 
-<f:for each="{subpages}" as="section" iteration="iteration">
-	<section id="{section.data.subtitle}"  class="onepageSection{f:if(condition:iteration.isEven, then: ' even')}">
-		<div class="container">
-			<f:cObject typoscriptObjectPath="lib.renderContentSubpages" data="{section.data.uid}"   />
-		</div>
-	</section>
-</f:for>
 
 
 
+
+	<footer class="footer fixed-bottom">
+	<div class="container">
+		<p class="text-muted">Platziere hier den Inhalt für den fixierten Footer.</p>
+	</div>
+</footer>
+
+</f:section>
 
 
 

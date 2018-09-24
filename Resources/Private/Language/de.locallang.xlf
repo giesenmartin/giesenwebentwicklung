@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2014-05-02T12:00:00Z" product-name="in2template">
+		<header/>
+		<body>
+			<trans-unit id="contentElement.slider">
+				<source>Slideshow</source>
+				<target state="translated">Slideshow</target>
+			</trans-unit>
+			<trans-unit id="contentElement.slider.description">
+				<source>Fullscreen slideshow content element</source>
+				<target state="translated">Fullscreen Slideshow Seiteninhalt</target>
+			</trans-unit>
+
+			<trans-unit id="flexform.slider.main">
+				<source>Main</source>
+				<target state="translated">Einstellungen</target>
+			</trans-unit>
+			<trans-unit id="flexform.slider.main.slider">
+				<source>Slider settings</source>
+				<target state="translated">Slider Einstellungen</target>
+			</trans-unit>
+			<trans-unit id="flexform.slider.main.slider.slide">
+				<source>Slide</source>
+				<target state="translated">Slide</target>
+			</trans-unit>
+			<trans-unit id="flexform.slider.main.slider.image">
+				<source>Image</source>
+				<target state="translated">Bild</target>
+			</trans-unit>
+			<trans-unit id="flexform.slider.main.slider.imageOrientationVertical">
+				<source>Image orientation vertical</source>
+				<target state="translated">Vertikale Bildausrichtung</target>
+			</trans-unit>
+			<trans-unit id="flexform.slider.main.slider.imageOrientationVertical.0">
+				<source>top</source>
+				<target state="translated">oben</target>
+			</trans-unit>
+			<trans-unit id="flexform.slider.main.slider.imageOrientationVertical.1">
+				<source>middle</source>
+				<target state="translated">mitte</target>
+			</trans-unit>
+			<trans-unit id="flexform.slider.main.slider.imageOrientationVertical.2">
+				<source>bottom</source>
+				<target state="translated">unten</target>
+			</trans-unit>
+			<trans-unit id="flexform.slider.main.slider.imageOrientationHorizontal">
+				<source>Image orientation horizontal</source>
+				<target state="translated">Horizontale Bildausrichtung</target>
+			</trans-unit>
+			<trans-unit id="flexform.slider.main.slider.imageOrientationHorizontal.0">
+				<source>left</source>
+				<target state="translated">links</target>
+			</trans-unit>
+			<trans-unit id="flexform.slider.main.slider.imageOrientationHorizontal.1">
+				<source>middle</source>
+				<target state="translated">mitte</target>
+			</trans-unit>
+			<trans-unit id="flexform.slider.main.slider.imageOrientationHorizontal.2">
+				<source>right</source>
+				<target state="translated">rechts</target>
+			</trans-unit>
+			<trans-unit id="flexform.slider.main.slider.title">
+				<source>Title</source>
+				<target state="translated">Überschrift</target>
+			</trans-unit>
+			<trans-unit id="flexform.slider.main.slider.subtitle">
+				<source>Subtitle</source>
+				<target state="translated">Untertitel</target>
+			</trans-unit>
+			<trans-unit id="flexform.slider.main.slider.link">
+				<source>Link</source>
+				<target state="translated">Link</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
