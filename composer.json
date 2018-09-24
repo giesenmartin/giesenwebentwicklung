@@ -1,6 +1,6 @@
 {
     "name": "giesen/giesenwebentwicklung",
-    "description": "Template f\u0000r meine eigene Hompage",
+    "description": "Template fuer meine eigene Hompage",
     "type": "typo3-cms-extension",
     "require": {
 		"typo3/cms-core": ">=7.6.0 <9.9.99"
@@ -11,6 +11,7 @@
             "email": "info@martin-giesen.de"
         }
     ],
+	"minimum-stability": "dev",
 	"replace": {
 		"giesenwebentwicklung": "self.version",
 		"typo3-ter/giesenwebentwicklung": "self.version"
