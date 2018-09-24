@@ -98,14 +98,14 @@ $GLOBALS['TCA']['tt_content']['types']['textform'] = array_replace_recursive(
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
     '*',
-    'FILE:EXT:giesenwebentwicklung/Configuration/FlexForms/ContentElements/StartSlider.xml',
+    'FILE:EXT:giesenwebentwicklung/Configuration/Flexforms/ContentElements/StartSlider.xml',
     'startslider'
 );
 
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
     '*',
-    'FILE:EXT:giesenwebentwicklung/Configuration/FlexForms/ContentElements/ReferenceSlider.xml',
+    'FILE:EXT:giesenwebentwicklung/Configuration/Flexforms/ContentElements/ReferenceSlider.xml',
     'referenceslider'
 );
 
