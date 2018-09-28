@@ -46,7 +46,7 @@ mod.web_layout.BackendLayouts {
 							1 {
 								name = Inhalt
 								colPos = 1
-								###                allowed = undefined das muss weg
+							  allowed = header,text,textpic,image,textmedia,bullets,table,uploads,menu_abstract,menu_categorized_content,menu_categorized_pages,menu_pages,menu_subpages,menu_recently_updated,menu_related_pages,menu_section,menu_section_pages,menu_sitemap,menu_sitemap_pages,shortcut,list,div,html,login,form_formframework,gridelements_pi1
 							}
 
 						}

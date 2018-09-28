@@ -65,6 +65,15 @@ page {
 
   includeCSS {
     file1 = EXT:giesenwebentwicklung/Resources/Public/Css/giesen.css
+    file1.media = all
+
+    file10 = http://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic
+    file10.external = 1
+    file10.media = all
+
+    file100 = http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800
+    file100.external = 1
+    file100.media = all
 
   }
 
@@ -73,6 +82,8 @@ page {
   includeJSFooterlibs {
     jquery = EXT:giesenwebentwicklung/Resources/Public/Js/giesen.min.js
     jquery.type = application/x-javascript
+
+
 
   }
 
@@ -114,6 +125,9 @@ page {
 
     variables {
 
+      hauptInhalt < styles.content.get
+      hauptInhalt.select.where = colPos = 1
+
     }
 
     file.stdWrap.cObject = CASE
@@ -129,6 +143,10 @@ page {
       pagets__Onepager.value =  EXT:giesenwebentwicklung/Resources/Private/Templates/Pages/Onepager.html
       pagets__Onepagersection < .default
       pagets__Onepagersection.value =  EXT:giesenwebentwicklung/Resources/Private/Templates/Pages/Onepagersection.html
+      pagets__Default < .default
+      pagets__Default.value =  EXT:giesenwebentwicklung/Resources/Private/Templates/Pages/Default.html
+
+
     }
   }
 }
@@ -143,7 +161,7 @@ tt_content {
     partialRootPath = EXT:giesenwebentwicklung/Resources/Private/Partials
     layoutRootPath = EXT:giesenwebentwicklung/Resources/Private/Layouts
 
-    file = EXT:giesenwebentwicklung/Resources/Private/Templates/ContentElements/StartSlider.html
+    file = EXT:giesenwebentwicklung/Resources/Private/Templates/Contentelements/StartSlider.html
     variables {
       settings < page.10.settings
     }
@@ -160,7 +178,7 @@ tt_content {
     partialRootPath = EXT:giesenwebentwicklung/Resources/Private/Partials
     layoutRootPath = EXT:giesenwebentwicklung/Resources/Private/Layouts
 
-    file = EXT:giesenwebentwicklung/Resources/Private/Templates/ContentElements/ReferenceSlider.html
+    file = EXT:giesenwebentwicklung/Resources/Private/Templates/Contentelements/ReferenceSlider.html
     variables {
       settings < page.10.settings
     }
@@ -178,7 +196,7 @@ tt_content {
     partialRootPath = EXT:giesenwebentwicklung/Resources/Private/Partials
     layoutRootPath = EXT:giesenwebentwicklung/Resources/Private/Layouts
 
-    file = EXT:giesenwebentwicklung/Resources/Private/Templates/ContentElements/TextForm.html
+    file = EXT:giesenwebentwicklung/Resources/Private/Templates/Contentelements/TextForm.html
     variables {
       settings < page.10.settings
     }
@@ -199,14 +217,52 @@ tt_content {
 
 }
 
-plugin.tx_form.view.templateRootPaths.0 = EXT:giesenwebentwicklung/Resources/Private/Templates/ContentElements/Form
-plugin.tx_form.view.templateRootPaths.5 = EXT:giesenwebentwicklung/Resources/Private/Templates/ContentElements/Form
+#plugin.tx_form.view.templateRootPaths.0 = EXT:giesenwebentwicklung/Resources/Private/Templates/Contentelements/Form
+plugin.tx_form.view.templateRootPaths.5 = EXT:giesenwebentwicklung/Resources/Private/Templates/Contentelements/Form
 
 
 plugin.tx_form.settings.yamlConfigurations {
-  100 = EXT:giesenwebentwicklung/Configuration/Forms/Base.yaml
+  10 = EXT:giesenwebentwicklung/Configuration/Forms/Base.yaml
 }
 
 module.tx_form.settings.yamlConfigurations {
-   100 = EXT:giesenwebentwicklung/Configuration/Forms/Base.yaml
+  10 = EXT:giesenwebentwicklung/Configuration/Forms/Base.yaml
 }
+
+
+
+lib.fluidContent{
+  templateRootPaths{
+    10 = EXT:giesenwebentwicklung/Resources/Private/Fsc/Templates
+  }
+  partialRootPaths{
+    10 = EXT:giesenwebentwicklung/Resources/Private/Fsc/Partial
+  }
+  layoutRootPaths{
+    10 = EXT:giesenwebentwicklung/Resources/Private/Fsc/Layouts
+  }
+}
+
+
+
+
+temp.copyright = TEXT
+temp.copyright {
+  data = date : U
+  strftime = %Y
+  noTrimWrap = |&copy; | Giesen Webentwicklung |
+}
+
+lib.footer = COA
+lib.footer {
+  10 < temp.copyright
+  20 = TEXT
+  20.value = Impressum
+  20.typolink.parameter = 8
+  20.noTrimWrap = |&vert; | |
+  30 = TEXT
+  30.value = Datenschutz
+  30.typolink.parameter = 9
+  30.noTrimWrap = |&vert; | |
+}
+

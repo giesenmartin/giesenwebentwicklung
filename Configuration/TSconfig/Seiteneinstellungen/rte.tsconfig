@@ -41,3 +41,14 @@ mod {
 
 
 
+TCEFORM.tt_content.header_layout {
+	removeItems = 3,4,5
+	altLabels {
+			0 = Artikel Überschrift standard
+			1 = Sektions Überschift
+			2 = 2. Überschrift
+		}
+}
+
+
+

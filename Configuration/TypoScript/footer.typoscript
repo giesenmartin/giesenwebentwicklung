@@ -1,0 +1,18 @@
+temp.copyright = TEXT
+temp.copyright {
+  data = date : U
+  strftime = %Y
+  noTrimWrap = |&copy; | Giesen Webentwicklung|
+}
+
+lib.footer = COA
+lib.footer {
+  10 < temp.copyright
+  20 = TEXT
+  20.value = Impressum
+#  20.typolink.parameter = 8
+
+
+}
+
+

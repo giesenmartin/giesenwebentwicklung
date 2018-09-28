@@ -1,10 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Default</title>
-</head>
-<body>
 
-</body>
-</html>
+<f:layout name="Pages/Page" />
+
+
+<f:section name="Main">
+
+
+	<section id="main"  class="firstSection">
+		<div class="container">
+			<div class="box">
+				<div class="row">
+					<div class="col-12">
+						{hauptInhalt-> f:format.raw()}
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</f:section>
